@@ -1,32 +1,31 @@
 <?php
-$name = "Иванов Иван";
-$prof = "Таможенный декларант";
-$city = "Усть-Калым";
-$mail = "ivanof@profession.al";
-$tel = "322233-223322";
+$name = 'Иннокентий'; // строка
+$city = 'Москва, Россия'; // строка
+$profi = 'Дизайнер'; // строка
+$email = 'email@email.com'; // строка
+$phone = 89037778866; // десятичное число
+$age = 2022-1985;
+$days = (2022-1985)*365;
+
+$skills = [
+        'skill_name' => ['Adobe Photoshop', 'Фотография', 'Illustrator', 'Копирайтинг'],
+        'level' => [97, 83, 70, 80]
+    ];
+
+$expirience = [[
+        'position' => 'Front End Developer',
+        'period' => 'Jan 2015 - ',
+        'description' => 'Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste'
+       ],
+       ['position' => 'Web Developer / something.com',
+        'period' => 'Mar 2012 - Dec 2014',
+        'description' => 'Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.'
+       ],
+       ['position' => 'Graphic Designer / designsomething.com',
+        'period' => 'Jun 2010 - Mar 2012',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.']
+    ];
 ?>
-<!-- $skills = [
-  'Photoshop', 'Photography', 'Illustrator', 'Media'
-];
-$level = [
-'90','30','60','70'
-]; -->
-<!-- foreach ($skills as $skill): ?>
-  
-<?=$skill['name']?> <?=$skill['value']?>
-
-<?php endforeach;?>
-
-
-foreach ($skills as $key => $skill): ?>
-
-<?php if ($key == 0):?> current <?php endif; ?>
-
-<?=$skill['name']?> <?=$skill['value']?>
-
-<?php endforeach;?> -->
-
-
 
 <!DOCTYPE html>
 <html>
@@ -58,37 +57,36 @@ foreach ($skills as $key => $skill): ?>
         <div class="w3-display-container">
           <img src="https://imgfon.ru/Images/Details_img_880px/Animals/glaza-belyy_fon-kotik-morda-polosatyy.webp" style="width:100%" alt="Avatar">
           <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2><?php echo $name; ?></h2>
             
-            <h2><?php echo $name ?></h2>
-           
           </div>
         </div>
         <div class="w3-container">
-        
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $prof ?></p>
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $profi; ?></p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $city ?></p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $mail ?></p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $tel ?></p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $email ?></p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $phone ?></p>
+          <p><i class="fa fa-hourglass-half fa-fw w3-margin-right w3-large w3-text-teal"></i><?php echo $age ?> лет (<?php echo $days ?> дней)</p>
           <hr>
 
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Навыки</b></p>
-          <p><?php print($skills[1]) ?></p>
+          <p><?php echo $skills['skill_name'][0]; ?></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $level[1] ?>%"><?php echo $level[1] ?></div>
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $skills['level'][0]; ?>%"><?php echo $skills['level'][0]; ?>%</div>
           </div>
-          <p><?php print($skills[2]) ?></p>
+          <p><?php echo $skills['skill_name'][1]; ?></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $level[2] ?>%">
-              <div class="w3-center w3-text-white"><?php echo $level[2] ?>%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $skills['level'][1]; ?>%">
+              <div class="w3-center w3-text-white"><?php echo $skills['level'][1]; ?>%</div>
             </div>
           </div>
-          <p><?php echo $level[3] ?></p>
+          <p><?php echo $skills['skill_name'][2]; ?></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $level[3] ?>%"><?php echo $level[3] ?>%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $skills['level'][2]; ?>%"><?php echo $skills['level'][2]; ?>%</div>
           </div>
-          <p><?php echo $level[4] ?></p>
+          <p><?php echo $skills['skill_name'][3]; ?></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $level[4] ?>%"><?php echo $level[4] ?>%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $skills['level'][3]; ?>%"><?php echo $skills['level'][3]; ?>%</div>
           </div>
           <br>
 
@@ -118,21 +116,21 @@ foreach ($skills as $key => $skill): ?>
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Опыт работы</h2>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Front End Developer </b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+          <h5 class="w3-opacity"><b><?php echo $expirience[0]['position']; ?></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $expirience[0]['period']; ?><span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p><?php echo $expirience[0]['description']; ?></p>
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
-          <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+          <h5 class="w3-opacity"><b><?php echo $expirience[1]['position']; ?></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $expirience[1]['period']; ?></h6>
+          <p><?php echo $expirience[1]['description']; ?></p>
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
+          <h5 class="w3-opacity"><b><?php echo $expirience[2]['position']; ?></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $expirience[2]['period']; ?></h6>
+          <p><?php echo $expirience[2]['description']; ?></p><br>
         </div>
       </div>
 

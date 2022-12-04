@@ -3,7 +3,15 @@
     <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <span id="val1"></span> + <span id="val2"></span> = <span id="result"></span>
+    <span id="val1"></span> <span id="sign"><select>
+        <option>"+"</option>
+        <option>"-"</option>
+        <option>"*"</option>
+        <option>"/"</option>
+        <option>"//"</option>
+        <option>"%"</option>
+        <option>"**"</option>
+    </select></span> <span id="val2"></span> = <span id="result"></span>
  
  
     <script>
@@ -12,7 +20,8 @@
         val2 = +prompt("Input 2nd value: ");    
      
         //Логика 
-        result = val1 + val2;
+        switch
+        case sign = +:result = val1 + val2;
      
         //Вывод данных
         document.getElementById("val1").innerText = val1;

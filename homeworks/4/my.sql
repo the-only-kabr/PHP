@@ -1,0 +1,18 @@
+-- create
+CREATE TABLE CLASSMATES1 (
+  empId INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  age TEXT NOT NULL,
+  address TEXT NOT NULL
+);
+
+-- insert
+INSERT INTO CLASSMATES1 VALUES (0001, 'Slava', '37','SpB');
+INSERT INTO CLASSMATES1 VALUES (0002, 'Alex', '18' ,'MsK');
+INSERT INTO CLASSMATES1 VALUES (0003, 'Irina', '18++' ,'Par');
+INSERT INTO CLASSMATES1 VALUES (0004, 'Evgesha', '18' ,'Msk');
+
+-- fetch 
+SELECT * FROM CLASSMATES1 WHERE age > '15';
+
+-- id, name, age, address.
