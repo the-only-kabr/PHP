@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <root>
+        <Корзиночка_магазинчика>
+            <Категории>
+                <Инструментики>
+                    <Бензопилочка>
+                        <deadness>20</deadness>
+                        <id>0</id>
+                        <points_of_authority>146</points_of_authority>
+                        <price>863</price>
+                        <title>Хускварна</title>
+                    </Бензопилочка>
+                    <Нож_кухонный>
+                        <deadness>2</deadness>
+                        <id>2</id>
+                        <points_of_authority>14</points_of_authority>
+                        <price>34</price>
+                        <title>Регент</title>
+                    </Нож_кухонный>
+                    <Тесачок>
+                        <deadness>4</deadness>
+                        <id>1</id>
+                        <points_of_authority>44</points_of_authority>
+                        <price>68</price>
+                        <title>Вурхизик</title>
+                    </Тесачок>
+                </Инструментики>
+                <Расходные_материалы>
+                    <Компонент_зелья_1>
+                        <id>0</id>
+                        <magic_power>5</magic_power>
+                        <title>Кровь единорога</title>
+                    </Компонент_зелья_1>
+                    <Компонент_зелья_2>
+                        <id>1</id>
+                        <magic_power>5</magic_power>
+                        <title>Жабий пот</title>
+                    </Компонент_зелья_2>
+                </Расходные_материалы>
+            </Категории>
+        </Корзиночка_магазинчика>
+    </root>
